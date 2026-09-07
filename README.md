@@ -1,46 +1,37 @@
-# Chad's Chimney — website
+# Chad's Chimney website
 
-A complete, single-file website for Chad's Chimney LLC (Andover, KS).
-Everything is in `index.html`: markup, styles and the tab script. No build
-step, no dependencies, no framework. Open it in a browser and it works.
+A responsive, multi-page website for Chad's Chimney LLC in Andover, Kansas.
+The site is plain HTML, CSS, and a small amount of JavaScript, so it can be
+hosted without a build step or framework.
 
-## What's in it
+## Pages
 
-Five tabs — Home, Services & prices, Inspections, Questions, Contact — with
-one call to action throughout: the phone number. It's a button in the header
-on every tab, and on a phone a Call bar is pinned to the bottom of the screen
-so the number is never more than a thumb away.
+- `index.html` — homepage
+- `services.html` — service overview and starting prices
+- `sweeping.html` — chimney-cleaning details
+- `inspections.html` — Level 1, 2, and 3 inspection guide
+- `installation-repair.html` — installation and repair services
+- `about.html` — Chad's qualifications and service approach
+- `contact.html` — phone, email, address, and scheduling guidance
 
-The `<head>` already carries the page title, the meta description and a
-`LocalBusiness` JSON-LD block with the address, phone, service area, price
-range and credentials, so Google can read the business details straight off
-the page.
+Shared styling lives in `styles.css`; the accessible mobile navigation lives
+in `site.js`. Approved logo and photography from the current Chad's Chimney
+site are stored in `assets/`.
 
-## Publishing it
+## Local preview
 
-**GitHub Pages** — Settings → Pages → Source: *Deploy from a branch* →
-`main` / `/ (root)` → Save. The site appears at
-`https://obtill199.github.io/chad-chimney/` within a minute or two.
-Pages needs the repository to be **public** unless the account is on a paid
-plan; this repo is currently private.
+Run any static file server from the repository root, then open `index.html`.
+There are no packages to install.
 
-**On Chad's own domain** — once he's happy with it, point `chadschimney.com`
-at Pages: add a `CNAME` file to this repo containing `www.chadschimney.com`,
-then set the DNS record at his registrar. Keeping the site on his own domain
-matters for search; a `github.io` address is fine for showing him, not for
-the long run.
+## Before launch
 
-## Before it goes live
+- Confirm the published prices: $160 starting cleaning price, $140 returning
+  customer price, and $280 starting Level 2 inspection price.
+- Confirm the exact wording and current status of every certification.
+- Confirm the public street address and desired service-area wording.
+- Add authentic reviews only after Chad supplies or approves them.
+- Decide whether the production host will use the clean canonical paths in the
+  page metadata or retain the `.html` filenames.
+- Replace the year in the footer when needed.
 
-- [ ] Confirm hours and insurance details (the footer says they're unconfirmed)
-- [ ] Confirm the installation and repair scope reads the way Chad describes it
-- [ ] Swap the reviews placeholder on the Home tab for his real Google reviews
-- [ ] Replace the chimney drawing with photographs of his own work
-- [ ] Check every price against what he's charging now
-
-## Editing it
-
-Prices, phone number and copy are plain text in `index.html` — search for
-`$140`, `655-9875` or any sentence you want to change. Colours are CSS
-variables in the `:root` block at the top; the whole palette changes from
-about six lines. Both light and dark modes come from the same variables.
+See `CRITIQUE.md` for the source audit, design rationale, and remaining risks.
